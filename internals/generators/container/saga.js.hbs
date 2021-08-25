@@ -1,0 +1,12 @@
+import { sagaTypes, generateSaga } from 'utils/generic-saga';
+
+import { all } from 'redux-saga/effects';
+import * as api from './services';
+import { {{ camelCase name }}ActionTypes } from './constants';
+
+const {{ camelCase name }} = generateSaga(sagaTypes.POST, {{ camelCase name }}ActionTypes, api.{{ camelCase name }});
+
+// Individual exports for testing
+export default function* {{ camelCase name }}Saga() {
+  yield all([{{ camelCase name }}()])
+}
